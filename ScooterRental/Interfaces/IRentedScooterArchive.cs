@@ -10,6 +10,8 @@ namespace ScooterRental.Interfaces
     {
         void AddRentedScooter(RentedScooter scooter);
         RentedScooter EndRental(string scooterId, DateTime rentEnd);
+
         List<RentedScooter> GetRentedScooters();
+
     }
 }
