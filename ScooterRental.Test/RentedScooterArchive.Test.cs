@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using ScooterRental.Archive;
 
 namespace ScooterRental.Tests
 {

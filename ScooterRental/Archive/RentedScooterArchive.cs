@@ -1,6 +1,6 @@
 ﻿using ScooterRental.Interfaces;
 
-namespace ScooterRental
+namespace ScooterRental.Archive
 {
     public class RentedScooterArchive : IRentedScooterArchive
     {

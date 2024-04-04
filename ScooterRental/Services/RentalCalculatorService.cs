@@ -1,6 +1,6 @@
 ﻿using ScooterRental.Interfaces;
 
-namespace ScooterRental
+namespace ScooterRental.Services
 {
     public class RentalCalculatorService : IRentalCalculatorServiss
     {
@@ -39,9 +39,9 @@ namespace ScooterRental
 
             foreach (var scooter in rentedScooters)
             {
-                bool includeRental = (year == null 
-                    ||(scooter.RentEnd?.Year == year 
-                    ||scooter.RentStart.Year == year));
+                bool includeRental = year == null
+                    || scooter.RentEnd?.Year == year
+                    || scooter.RentStart.Year == year;
 
                 if (includeNotCompletedRentals || scooter.RentEnd.HasValue)
                 {
@@ -62,8 +62,8 @@ namespace ScooterRental
             }
 
             if (day.Date < rentalRecord.RentStart.Date ||
-                (rentalRecord.RentEnd.HasValue 
-                && day.Date > rentalRecord.RentEnd.Value.Date))
+                rentalRecord.RentEnd.HasValue
+                && day.Date > rentalRecord.RentEnd.Value.Date)
             {
                 return 0m;
             }

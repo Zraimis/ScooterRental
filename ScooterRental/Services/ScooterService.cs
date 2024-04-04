@@ -1,6 +1,6 @@
 ﻿using ScooterRental.Interfaces;
 
-namespace ScooterRental
+namespace ScooterRental.Services
 {
     public class ScooterService : IScooterService
     {
@@ -11,7 +11,7 @@ namespace ScooterRental
         }
         public void AddScooter(string id, decimal pricePerMinute)
         {
-            if(string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(id))
             {
                 throw new InvalidScooterIdException("Invalid scooterId");
             }
@@ -23,7 +23,7 @@ namespace ScooterRental
             {
                 throw new InvalidPriceException("Invalid price");
             }
-            if(_scooters.Any(scooter =>  scooter.Id == id)) 
+            if (_scooters.Any(scooter => scooter.Id == id))
             {
                 throw new InvalidDuplicationException("Scooter already exists");
             }
@@ -38,11 +38,11 @@ namespace ScooterRental
                 throw new InvalidScooterIdException("Invalid scooterId");
             }
             return scooter;
-        }   
+        }
 
         public IList<Scooter> GetScooters()
         {
-            if(_scooters.Count == 0)
+            if (_scooters.Count == 0)
             {
                 throw new NoScootersException("No scooters, Its empty");
             }
