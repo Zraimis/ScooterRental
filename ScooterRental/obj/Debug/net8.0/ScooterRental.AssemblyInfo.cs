@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ScooterRental")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67ecb91007b6561b15467eaa5504fe545279d85c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ScooterRental")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ScooterRental")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
