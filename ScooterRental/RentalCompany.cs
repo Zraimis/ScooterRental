@@ -16,6 +16,7 @@ public class RentalCompany : IRentalCompany
         _archive = archive;
         _calculatorService = calcualtorService;
     }
+
     public string Name { get; }
 
     public void StartRent(string id)
@@ -24,6 +25,7 @@ public class RentalCompany : IRentalCompany
         _archive.AddRentedScooter(new RentedScooter(scooter.Id,DateTime.Now, scooter.PricePerMinute));
         scooter.IsRented = true;
     }
+
     public decimal EndRent(string id)
     {
         var scooter = _scooterService.GetScooterById(id);
@@ -32,6 +34,7 @@ public class RentalCompany : IRentalCompany
         scooter.IsRented = false;
         return _calculatorService.CalculateRent(rentalRecord);
     }
+
     public decimal CalculateIncome(int? year, bool includeNotCompletedRentals)
     {
         return _calculatorService.CalculateIncome(year, includeNotCompletedRentals);
