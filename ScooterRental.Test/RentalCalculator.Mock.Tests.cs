@@ -2,6 +2,7 @@
 using Moq;
 using Moq.AutoMock;
 using ScooterRental.Interfaces;
+using ScooterRental.Services;
 
 namespace ScooterRental.Tests
 {
