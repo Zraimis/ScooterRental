@@ -48,6 +48,7 @@ namespace ScooterRental.Services
             }
             return _scooters;
         }
+
         public void RemoveScooter(string id)
         {
             _scooters.RemoveAll(scooter => scooter.Id == id);
